@@ -32,7 +32,7 @@ const TopBar = () => {
         >
             <InputBase
              sx={{ml:2, flex:1}} 
-             Placeholder='Search'           
+             placeholder='Search'           
             />
             <IconButton  
             type='button'

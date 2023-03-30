@@ -1,6 +1,9 @@
 import { ColorModeContext, useMode } from "./Scenes/Theme";
 import { CssBaseline,ThemeProvider } from "@mui/material";
 import TopBar from "./Scenes/Global/TopBar";
+import Dashboard from './Scenes/Dashboard'
+import { Route, Routes } from "react-router-dom";
+import SidBar from "./Scenes/Global/SidBar";
 
 
 function App () {
@@ -9,13 +12,19 @@ function App () {
   return(
     <ColorModeContext.Provider value={colorMode}>
     <ThemeProvider theme={theme}>
+       <CssBaseline/>
       <div className="App">
-             <CssBaseline/>
+             
             <main>
               <TopBar/>
+                     
+                     <Routes>
+                          <Route  path="/" element={<Dashboard/>}/>
+                     </Routes>
             </main>
 
       </div>
+      <SidBar/>
     </ThemeProvider>
     
     
