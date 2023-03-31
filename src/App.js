@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import  Dashboard from './Scenes/Dashboard'
 import Team from "./Scenes/Team";
 import Contact from "./Scenes/Contact";
+import Invoices from "./Scenes/Invoices";
 
 function App () {
   const [ theme, colorMode] = useMode();
@@ -22,6 +23,7 @@ function App () {
                          <Route path="/" element={ <Dashboard />}/>
                          <Route path="/Team" element={<Team/>} />
                          <Route path="/Contact" element={<Contact/>}/>
+                         <Route path="/Invoices" element={<Invoices/>}/>
                      </Routes>
             </main>
           
