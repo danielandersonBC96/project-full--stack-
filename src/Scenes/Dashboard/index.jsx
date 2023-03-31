@@ -1,5 +1,6 @@
 import { Box } from "@mui/material"
 import Header from "../../Components/Header"
+import SidBar from "../Global/SidBar"
 
 
 const Dashboard = () => {
@@ -18,7 +19,12 @@ const Dashboard = () => {
            title="Dashboard" 
            subtitle= "  Welcom to Painel of Admin"/>
            </Box>
+
+           <Box>
+            <SidBar/>
+           </Box>
        </Box>
+       
     )
 }
 export default Dashboard
