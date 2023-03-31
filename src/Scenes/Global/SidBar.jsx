@@ -76,22 +76,11 @@ const SidBar = () => {
                         )}
                         
                         </MenuItem>
-
-
                     </Menu>
 
-
-
-
-
               </ProSidebar>
-     
-     
-
         </Box>
-       
-
-         
+    
     )
 }
 
