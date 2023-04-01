@@ -49,34 +49,12 @@ const Contact = () => {
             flex:1,
         },
         {
-            field: ' zipCode',
-            headerName: 'zipCode ',
-            flex:1,
-        },
-        {
-            field:'access',
-            headerName:'Access Level',
-            flex: 1 ,
-              rendeCell: ({ rows:{ access}}) => {
-                return (
-                    <Box
-                     width = ' 60%'
-                     m='0 auto '
-                     display = ' flex'
-                     justifyContent= 'center'
-                     backgroundColor={
-                        access === 'admin'
-                        ? colors.greenAccent[600]
-                        : colors.greenAccent[700] 
-                     }
-                     borderRadius= ' 4px '
-                    >
-                      
-                     
-                    </Box>
-                )
-              }
-        }
+            field: "zipCode",
+            headerName: "Zip Code",
+            flex: 1,
+          },
+       
+        
 
 
     ]

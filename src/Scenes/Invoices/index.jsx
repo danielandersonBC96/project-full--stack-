@@ -42,11 +42,11 @@ const Invoices = () => {
             }
         },
         {
-            field: 'data',
-            headerName: 'Data',
-            flex:1, 
-            
-        },
+            field: "date",
+            headerName: "Date",
+            flex: 1,
+          },
+
      
               
         
