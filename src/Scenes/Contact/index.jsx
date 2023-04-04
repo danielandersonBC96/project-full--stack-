@@ -1,11 +1,11 @@
 import { Box } from '@mui/material';
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { tokens} from '../../Scenes/Theme';
-import {mockDataContacts, mockDataTeam} from '../../Data/mockData'
+import {mockDataContacts } from '../../Data/mockData'
 import Header from '../../Components/Header/index'
 import { useTheme } from '@emotion/react';
 
-
+ 
 const Contact = () => {
 
     const theme = useTheme();
@@ -53,9 +53,6 @@ const Contact = () => {
             headerName: "Zip Code",
             flex: 1,
           },
-       
-        
-
 
     ]
 
