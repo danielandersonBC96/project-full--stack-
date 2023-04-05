@@ -6,6 +6,7 @@ import  Dashboard from './Scenes/Dashboard'
 import Team from "./Scenes/Team";
 import Contact from "./Scenes/Contact";
 import Invoices from "./Scenes/Invoices";
+import Form from "./Scenes/Form";
 
 function App () {
   const [ theme, colorMode] = useMode();
@@ -24,6 +25,7 @@ function App () {
                          <Route path="/Team" element={<Team/>} />
                          <Route path="/Contact" element={<Contact/>}/>
                          <Route path="/Invoices" element={<Invoices/>}/>
+                         <Route path="/Form" element={<Form/>}/>
                      </Routes>
             </main>
           
