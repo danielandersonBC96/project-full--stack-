@@ -9,6 +9,7 @@ import{
     List,
     ListItem,
     ListItemText,
+    Select,
     Typography,
     useTheme
 } from '@mui/material';
@@ -16,10 +17,36 @@ import Header from '../../Components/Header';
 import { tokens } from '../Theme';
 
 const Calendar = ()  => {
+    const Theme = useTheme();
+    const color = tokens(Theme.palette.mode);
+    const[currenteEvents, setCurrentEvents]= useState([ ])
 
 
+ const handleDaleteClcik = ( selected) => {
+    const title = prompt('Enter a new title for your event')
+    const calendarApi = selected.view.calendar
+    calendarApi.unselect();
 
-    
+    if(title) {
+      
+        calendarApi .addEven({
+
+        if: `${selected.dateStr}-${title}`,
+        title,
+        start:selected.startStr,
+        end: selected.endStr,
+        allDay:selected.allDay
+
+
+        })
+
+
+    }
+ } ;
+
+ 
+
+
 
 }
 
