@@ -44,7 +44,19 @@ const Calendar = ()  => {
     }
  } ;
 
- 
+ const handleEventClick =  ( selected) => { 
+
+    if (
+        window.confirm(
+            `Are you sure you want delete the event  '${selected.event.title}'`
+        )
+    ) {
+
+        selected.event.remove()
+    }
+
+ }
+
 
 
 
