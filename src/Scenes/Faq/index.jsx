@@ -1,29 +1,31 @@
-import { Box, useThem, Typography} from '@mui/material';
+import { Box, useTheme, Typography, AccordionDetails} from '@mui/material';
 import Header from '../../Components/Header'
-import Accordion from '@mui/material';
-import AccordionSummary from '@mui/material';
-import AccordionDetails from '@mui/material';
-import  ExpadMoreIcon  from '@mui/icons-material';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from "@mui/material/AccordionSummary";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+
+
 import { tokens } from '../Theme';
-import { useTheme } from '@emotion/react';
+
 
 const FaqDash = () => {
     const theme =  useTheme();
-    const colors =  tokens( theme.pallete.mode)
+ const  colors =   tokens(  theme.palette.mode)
 
     return(
         <Box>
             <Header title='Faq' subtitle=' Frequention Question Pages'/>
 
              <Accordion  defaultExpand > 
-                <AccordionSummary expandIcon={<ExpadMoreIcon/>}>
+                <AccordionSummary expandIcon={<ExpandMoreIcon/>}>
                    <Typography color={ colors.greenAccent[500]} variant='h5'>
                        Important Question
                    </Typography>
                 </AccordionSummary>
-                <AccordionDetails>
-
-                </AccordionDetails>
+               <AccordionDetails>
+                ...
+               </AccordionDetails>
+              
               </Accordion>
         </Box>
     )
