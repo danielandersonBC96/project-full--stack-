@@ -8,6 +8,7 @@ import Contact from "./Scenes/Contact";
 import Invoices from "./Scenes/Invoices";
 import Form from "./Scenes/Form";
 import CalendarDash from "./Scenes/Calendar";
+import FaqDash from "./Scenes/Faq";
 
 function App () {
   const [ theme, colorMode] = useMode();
@@ -28,6 +29,7 @@ function App () {
                          <Route path="/Invoices" element={<Invoices/>}/>
                          <Route path="/Form" element={<Form/>}/>
                          <Route path='/Calendar'  element={<CalendarDash/>}/>
+                         <Route  path="/Faq" element={<FaqDash/>}/>
                      </Routes>
             </main>
           
