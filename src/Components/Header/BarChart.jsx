@@ -1,23 +1,23 @@
 
 import { useTheme } from '@emotion/react'
 import { ResponsiveBar } from '@nivo/bar'
-import {  tokens } from '../../Scenes/Theme';
 import { mockBarData as data } from '../../Data/mockData';
 
+import { tokens } from "../../Scenes/Theme";
 
 
 const  Barchat = () => {
- 
     const theme = useTheme();
-    const colors = tokens (theme.palette.mode)
+    const colors = tokens(theme.palette.mode);
+
 
 return (
 
     < ResponsiveBar
     
 
-    data={data}
-    theme={{
+       data={data}
+       theme={{
         axis:{
             domain: {
                 line: {
@@ -163,11 +163,9 @@ return (
     role="application"
     ariaLabel="Nivo bar chart demo"
     barAriaLabel={function(e){return e.id+": "+e.formattedValue+" in country: "+e.indexValue}}
-/>
+    />
 
 
-)
-
-}
+)};
 
 export default Barchat;

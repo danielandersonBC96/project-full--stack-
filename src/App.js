@@ -31,7 +31,7 @@ function App () {
                          <Route path="/Form" element={<Form/>}/>
                          <Route path='/Calendar'  element={<CalendarDash/>}/>
                          <Route  path="/Faq" element={<FaqDash/>}/>
-                         <Route path='/Bar ' element={<Bar/>}/>
+                         <Route path='/Bar' element={<Bar/>}/>
                      </Routes>
             </main>
           
