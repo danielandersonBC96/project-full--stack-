@@ -3,22 +3,25 @@ import { useTheme } from '@emotion/react'
 import { colors } from '@mui/material';
 import { ResponsiveBar } from '@nivo/bar'
 import {  tokens } from '../../Scenes/Theme';
+import { mockBarData as data } from '../../Data/mockData';
 
 
 const  Barchat = () => {
     const theme = useTheme();
-    const colors = tokens(theme.palette.mode)
+    const colors = tokens(theme.palette.mode);
 
 return (
 
     < ResponsiveBar
-    // eslint-disable-next-line no-undef
+    
+    
     data={data}
     theme={{
         axis:{
             domain: {
                 line: {
-                    
+                    stroke: colors.grey[100]
+
                 }
             }
         }
