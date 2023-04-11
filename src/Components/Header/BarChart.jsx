@@ -1,30 +1,53 @@
 
 import { useTheme } from '@emotion/react'
-import { colors } from '@mui/material';
 import { ResponsiveBar } from '@nivo/bar'
 import {  tokens } from '../../Scenes/Theme';
 import { mockBarData as data } from '../../Data/mockData';
 
 
+
 const  Barchat = () => {
+ 
     const theme = useTheme();
-    const colors = tokens(theme.palette.mode);
+    const colors = tokens (theme.palette.mode)
 
 return (
 
     < ResponsiveBar
     
-    
+
     data={data}
     theme={{
         axis:{
             domain: {
                 line: {
-                    stroke: colors.grey[100]
+                    stroke: colors.grey[100],
 
-                }
-            }
-        }
+                },
+            },
+            legend:{
+                text:{
+                    fill:colors.grey[100],
+                },
+            },
+            ticks: {
+                line:{
+                    stroke: colors.grey[100],
+                    scrollbarWidth: 1,
+                },
+                text: {
+                    fill: colors.grey[100],
+                },
+            },
+
+
+        },
+        legends : {
+            text: {
+                fill:colors.grey[100]
+
+            },
+        },
 
     }}
     keys={[
