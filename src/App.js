@@ -9,6 +9,7 @@ import Invoices from "./Scenes/Invoices";
 import Form from "./Scenes/Form";
 import CalendarDash from "./Scenes/Calendar";
 import FaqDash from "./Scenes/Faq";
+import Bar from "./Scenes/Bar";
 
 function App () {
   const [ theme, colorMode] = useMode();
@@ -30,6 +31,7 @@ function App () {
                          <Route path="/Form" element={<Form/>}/>
                          <Route path='/Calendar'  element={<CalendarDash/>}/>
                          <Route  path="/Faq" element={<FaqDash/>}/>
+                         <Route path='/Bar ' element={<Bar/>}/>
                      </Routes>
             </main>
           
