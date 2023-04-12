@@ -56,10 +56,71 @@ const PierChart = ({ data}) => {
         ]}
         fill={[
 
+            {
+                match:{
+                    id:'ruby'
+                }
+            },
+            {
+                match:{
+                    id:'dots'
+                }
+            },
+            {
+                match: {
+                    id: 'go'
+                },
+                id: 'dots'
+            },
+            {
+                match: {
+                    id: 'python'
+                },
+                id: 'dots'
+            },
+            {
+                match: {
+                    id: 'scala'
+                },
+                id: 'lines'
+            },
+            {
+                match: {
+                    id: 'lisp'
+                },
+                id: 'lines'
+            },
+            {
+                match: {
+                    id: 'elixir'
+                },
+                id: 'lines'
+            },
+            {
+                match: {
+                    id: 'javascript'
+                },
+                id: 'lines'
+            }
+        ]}
 
+        legends= {[
 
-
-
+            {
+                anchor:'right',
+                direction:'column',
+                justify:'false',
+                translateX: 140 ,
+                translateY: 0,
+                itemsSpacing:2, 
+                itemWidth:60,
+                itemHeight:14, 
+                itemTextColor: '#999',
+                itemDirection: 'left-to-right',
+                itemOpacity:1,
+                symbolSize:14,
+                symbolShape: 'circle'
+            }
         ]}
         />   
      )
