@@ -22,7 +22,6 @@ function App () {
              
           <main>
               <TopBar/>
-             
                      <Routes>
                          <Route path="/" element={ <Dashboard />}/>
                          <Route path="/Team" element={<Team/>} />
