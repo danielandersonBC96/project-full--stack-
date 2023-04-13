@@ -11,6 +11,7 @@ import CalendarDash from "./Scenes/Calendar";
 import FaqDash from "./Scenes/Faq";
 import Bar from "./Scenes/Bar";
 import Pie from "./Scenes/Pie";
+import Line from "./Scenes/Line";
 
 function App () {
   const [ theme, colorMode] = useMode();
@@ -33,6 +34,7 @@ function App () {
                          <Route  path="/Faq" element={<FaqDash/>}/>
                          <Route path='/Bar' element={<Bar/>}/>
                          <Route  path="/Pie" element={<Pie/>}/>
+                         <Route path="/Line" element = { <Line/>} />
                      </Routes>
             </main>
           

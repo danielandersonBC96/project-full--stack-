@@ -3,10 +3,10 @@ import {ResponsivePie} from '@nivo/pie'
 import { tokens } from '../../Scenes/Theme';
 import { mockPieData as data} from '../../Data/mockData';
 
-const PierChart = () => {
+const PierChart = ({ isDashboard = false }) => {
 
-    const theme= useTheme();
-    const colors = tokens(theme.palette.mode)
+    const theme = useTheme();
+    const colors = tokens(theme.palette.mode);
 
     return(
         <ResponsivePie 
