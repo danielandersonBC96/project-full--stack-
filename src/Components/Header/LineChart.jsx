@@ -6,7 +6,7 @@ import { tokens } from "../theme";
 import { mockLineData as data } from "../data/mockData";
 
 
-const lineDashboard = ( {isCustomLineColors = false, isDashboard = false}) => {
+const LineChart = ( {isCustomLineColors = false, isDashboard = false}) => {
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const Theme = useTheme();
@@ -145,4 +145,4 @@ const lineDashboard = ( {isCustomLineColors = false, isDashboard = false}) => {
     />
 }
 
-export  default lineDashboard
+export  default LineChart
