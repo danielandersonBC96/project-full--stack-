@@ -1,20 +1,24 @@
 import { Box } from '@mui/material';
 import Header from '../../Components/Header';
-import LineChart from '../../Components/Header/LineChart';
+
+import LineDasChart from '../../Components/Header/LineDash';
+;
 
 
-const Line= () => {
+const Line = () => {
 
     return (
 
         <Box>
           <Header title= ' Line Dashboard' subtitle='Simple  line  Dashboard '/>
           <Box  height='75vh'>
-
-              <LineChart/>
+        
+                <LineDasChart/>
            </Box>
 
        </Box>
+
+     
     )
 
 
