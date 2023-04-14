@@ -12,6 +12,8 @@ import FaqDash from "./Scenes/Faq";
 import Bar from "./Scenes/Bar";
 import Pie from "./Scenes/Pie";
 import Line from "./Scenes/Line";
+import Geo from "./Scenes/Geograpy";
+
 
 function App () {
   const [ theme, colorMode] = useMode();
@@ -35,6 +37,7 @@ function App () {
                          <Route path='/Bar' element={<Bar/>}/>
                          <Route  path="/Pie" element={<Pie/>}/>
                          <Route path="/Line" element = { <Line/>} />
+                         <Route path="/Geo" element ={ <Geo/>}/>
                      </Routes>
             </main>
           
@@ -47,9 +50,6 @@ function App () {
     
     </ColorModeContext.Provider>
 
-  )
-
-
-}
+  )}
 
 export default App;
