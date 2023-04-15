@@ -1,5 +1,5 @@
 import { Box } from "@mui/material"
-import Header from "../../Components/Header"
+import Header from "../../Components/Header/Header"
 import SidBar from "../Global/SidBar"
 
 

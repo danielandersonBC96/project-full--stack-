@@ -2,7 +2,7 @@ import { Box, Typography, useTheme} from '@mui/material';
 import { DataGrid } from "@mui/x-data-grid";
 import { tokens} from '../../Scenes/Theme';
 import {mockDataTeam} from '../../Data/mockData'
-import Header from '../../Components/Header/index'
+import Header from '../../Components/Header/Header'
 import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettingsOutlined";
 import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
 import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
