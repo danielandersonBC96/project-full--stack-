@@ -1,7 +1,7 @@
 import {  useTheme} from '@mui/material'
 
 import { ResponsiveChoropleth } from "@nivo/geo";
-import { geoFeature} from '../../Data/mockGeoFeature'
+import { geoFeatures } from "../../Data/mockGeoFeature";
 import { tokens } from '../../Scenes/Theme'
 import { mockGeographyData as data  } from '../../Data/mockData';
 
@@ -44,7 +44,7 @@ const GeograpyDas = ({ isDashboard = false}) => {
                 },
               },
         }}
-        features = {geoFeature.features}
+         features={  geoFeatures.features}
         margin = {{ top: 0  ,  right: 0 , bottom:0, left: 0 }}
         domain={[0, 1000000]}
         unknowColor= '#666666'
