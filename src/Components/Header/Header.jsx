@@ -11,11 +11,13 @@ return(
           color={colors.grey[100]}
           fontWeight='bold'
           sx={{ m: "0 0 5px 0" }}
+          
           >
               {title}
           </Typography>
 
           <Typography
+          
           variante='h5'
           color={ colors.grey[400]}
           >
