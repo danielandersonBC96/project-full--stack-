@@ -13,6 +13,7 @@ import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import TrafficIcon from "@mui/icons-material/Traffic";
 import { tokens } from "../Theme";
+import Line from "../Line";
 
 
 
@@ -21,173 +22,114 @@ const Dashboard = () => {
     const theme = useTheme()
     const colors = tokens(theme.palette.mode)
 
-    return(
-
-       <Box
-        m='20px'
-       >
-           <Box display='flex'
-           justifyContent='space-between'
-           alignItems= "center"
-           >
-            
-           <Header
-           title="Dashboard" 
-           subtitle= "  Welcom to Painel of Admin"/>
-           </Box>
-
-           <Box>
-            <SidBar/>
-           </Box>
+    return (
+        <Box m="20px">
+         
+          <Box display="flex" justifyContent="space-between" alignItems="center">
+            <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
+    
             <Box>
-                <Button
-                sx={{ backgroundColor: colors.blueAccent['700'], 
-                color: colors.grey['100'],
-                fontSize: '14px',
-                fontWeight: 'bold',
-                padding:'10px 20px',
+              <Button
+                sx={{
+                  backgroundColor: colors.blueAccent[700],
+                  color: colors.grey[100],
+                  fontSize: "14px",
+                  fontWeight: "bold",
+                  padding: "10px 20px",
+                }}
+              >
+                <DownloadOutlinedIcon sx={{ mr: "10px" }} />
+                Download 
+              </Button>
+            </Box>
+          </Box>
+    
+          
+          <Box
+            display="grid"
+            gridTemplateColumns="repeat(12, 1fr)"
+            gridAutoRows="140px"
+            gap="20px"
+          >
             
-            }}
-                >
-                    <DownloadOutlinedIcon
-                    sx={{
-                        mr:'10px'
-                    }}
-                    />
-                    Donwload
-                </Button>
+            <Box
+              gridColumn="span 3"
+              backgroundColor={colors.primary[400]}
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+            >
+              <StatBox
+                title="12,361"
+                subtitle="Emails Sent"
+                progress="0.75"
+                increase="+14%"
+                icon={
+                  <EmailIcon
+                    sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                  />
+                }
+              />
             </Box>
             <Box
-            display={'grid'}
-            gridTemplateColumns=' reapeat(12, 1fr)'
-            gridAutoRows={'140px'}
-            gap={'20px'}
+              gridColumn="span 3"
+              backgroundColor={colors.primary[400]}
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
             >
-                <Box
-                gridAutoColumns=' span 3'
-                backgroundColor ={ colors.primary['400']}
-                display={'flex'}
-                alignItems={'center'}
-                justifyContent={'center'}
-                >
-                    <StatBox 
-                    title={'12,361'}
-                    subtitle={'emails'}
-                    progress={'0.75'}
-                    increase={'+14%'}
-                    icon={
-                        <EmailIcon
-                        
-                         sx={{
-                            color: colors.greenAccent['600'], fontSize:'26px'
-                         }}
-                        />
-                    }
-                    
-                    
-                    />
-                </Box>
+              <StatBox
+                title="431,225"
+                subtitle="Sales Obtained"
+                progress="0.50"
+                increase="+21%"
+                icon={
+                  <PointOfSaleIcon
+                    sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                  />
+                }
+              />
             </Box>
             <Box
-            display={'grid'}
-            gridTemplateColumns=' reapeat(12, 1fr)'
-            gridAutoRows={'140px'}
-            gap={'20px'}
+              gridColumn="span 3"
+              backgroundColor={colors.primary[400]}
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
             >
-                <Box
-                gridAutoColumns=' span 3'
-                backgroundColor ={ colors.primary['400']}
-                display={'flex'}
-                alignItems={'center'}
-                justifyContent={'center'}
-                >
-                    <StatBox 
-                    title={'431,361'}
-                    subtitle={'sales'}
-                    progress={'0.75'}
-                    increase={'+14%'}
-                    icon={
-                        <PointOfSaleIcon
-                        
-                         sx={{
-                            color: colors.greenAccent['600'], fontSize:'26px'
-                         }}
-                        />
-                    }
-                    
-                    
-                    />
-
-                </Box>
+              <StatBox
+                title="32,441"
+                subtitle="New Clients"
+                progress="0.30"
+                increase="+5%"
+                icon={
+                  <PersonAddIcon
+                    sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                  />
+                }
+              />
             </Box>
             <Box
-            display={'grid'}
-            gridTemplateColumns=' reapeat(12, 1fr)'
-            gridAutoRows={'140px'}
-            gap={'20px'}
+              gridColumn="span 3"
+              backgroundColor={colors.primary[400]}
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
             >
-                <Box
-                gridAutoColumns=' span 3'
-                backgroundColor ={ colors.primary['400']}
-                display={'flex'}
-                alignItems={'center'}
-                justifyContent={'center'}
-                >
-                    <StatBox 
-                    title={'32,361'}
-                    subtitle={'NewClient'}
-                    progress={'0.35'}
-                    increase={'+3%'}
-                    icon={
-                        <PersonAddIcon
-                        
-                         sx={{
-                            color: colors.greenAccent['600'], fontSize:'26px'
-                         }}
-                        />
-                    }
-                    
-                    
-                    />
-
-                </Box>  
-            </Box>
-            <Box
-            display={'grid'}
-            gridTemplateColumns=' reapeat(12, 1fr)'
-            gridAutoRows={'140px'}
-            gap={'20px'}
-            >
-                <Box
-                gridAutoColumns=' span 3'
-                backgroundColor ={ colors.primary['400']}
-                display={'flex'}
-                alignItems={'center'}
-                justifyContent={'center'}
-                >
-                    <StatBox 
-                    title={'1,112,361'}
-                    subtitle={'traffic'}
-                    progress={'0.95'}
-                    increase={'+44%'}
-                    icon={
-                        <TrafficIcon
-                        
-                         sx={{
-                            color: colors.greenAccent['600'], fontSize:'26px'
-                         }}
-                        />
-                    }
-                    
-                    
-                    />
-
-                </Box>
-               
-
-            </Box>
-       </Box>
-       
-    )
+              <StatBox
+                title="1,325,134"
+                subtitle="Traffic Received"
+                progress="0.80"
+                increase="+43%"
+                icon={
+                  <TrafficIcon
+                    sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                  />
+                }
+              />
+            </Box>      
+          </Box>
+        </Box>
+      );
 }
 export default Dashboard
