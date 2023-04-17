@@ -8,7 +8,7 @@ return(
     <Box mb= '30px'>
           <Typography
           variant="h2"
-          color={colors.grey[100]}
+          color={colors.grey['100']}
           fontWeight='bold'
           sx={{ m: "0 0 5px 0" }}
           
@@ -19,7 +19,7 @@ return(
           <Typography
           
           variante='h5'
-          color={ colors.grey[400]}
+          color={ colors.grey['400']}
           >
               {subtitle} 
           </Typography>

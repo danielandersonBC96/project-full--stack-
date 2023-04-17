@@ -15,22 +15,22 @@ const PierChart = ({ isDashboard = false }) => {
             axis:{
                 domain: {
                     line: {
-                        stroke: colors.grey[100],
+                        stroke: colors.grey['100'],
     
                     },
                 },
                 legend:{
                     text:{
-                        fill:colors.grey[100],
+                        fill:colors.grey['100'],
                     },
                 },
                 ticks: {
                     line:{
-                        stroke: colors.grey[100],
+                        stroke: colors.grey['100'],
                         scrollbarWidth: 1,
                     },
                     text: {
-                        fill: colors.grey[100],
+                        fill: colors.grey['100'],
                     },
                 },
     
@@ -38,7 +38,7 @@ const PierChart = ({ isDashboard = false }) => {
             },
             legends : {
                 text: {
-                    fill:colors.grey[100]
+                    fill:colors.grey['100']
     
                 },
             },
