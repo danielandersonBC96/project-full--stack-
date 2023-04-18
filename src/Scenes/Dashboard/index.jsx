@@ -14,6 +14,7 @@ import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import TrafficIcon from "@mui/icons-material/Traffic";
 import { tokens } from "../Theme";
 import Line from "../Line";
+import PierChart from "../../Components/Header/PierChart";
 
 
 
@@ -212,39 +213,109 @@ const Dashboard = () => {
                     >
                        <Box>
                             <Typography color = { colors.greenAccent['500'] }
-                            variant="h5" 
-                            fontWeight='600'
+                           
                              >
-                               Recent Transaction 
+                             
                                   {transaction.txId}
                             </Typography>
                             <Typography color = { colors.greenAccent['100'] }
-                            variant="h5" 
-                            fontWeight='600'
+                           
                              >
-                               Recent Transaction 
+                              
                                   {transaction.user}
                             </Typography>
                        </Box> 
                        <Box
-                       color={colors.grey['100']}
+                       color={colors.greenAccent['500']}
+                       backgroundColor={colors.primary['400']}
+                       p='5px 10px'
+                       borderRadius='4px'
                        >
                         {transaction.date}
+                        <div >
+                          ${transaction.cost}
+                        </div>
+                       
                        </Box>   
-                      <Box backgroundColor={ colors.greenAccent['500']}
-                      p='5px 10px '
-                      borderRadius='4px'
-
-                      
-                      >
-                        ${transaction.cost}
-                      </Box>
+                    
                     </Box>
                 )}
 
                </Box>
+               {/* dashboard part 3  body  */}
 
-          
+               <Box
+               gridColumn='span 4 '
+               gridRow='span 2 '
+               backgroundColor= { colors.primary[800]}
+              p='30px'
+               >
+                <Typography
+                variant ='h5'
+                fontWeight='600'
+                >
+                   Campaign
+                </Typography>
+                <Box displays =' flex'
+                  flexDirection=' column'
+                  alignItems='center'
+                  mt='25px'
+                  >
+                  
+                     <Typography
+                     variant="h5"
+                     color={colors.greenAccent[500]}
+                     sx={{mt:'15px'}}
+                     >
+                      $49,325 Revenue Gererated 
+                      
+                     </Typography>
+                     <Typography>
+                      Expenditures and Costs 
+                     </Typography>
+
+                 </Box>
+                 <Box height='250px' ml='-20px'>
+                   <PierChart/>            
+               </Box>
+              </Box>
+
+
+              <Box
+               gridColumn='span 4 '
+               gridRow='span 2 '
+               backgroundColor= { colors.primary[800]}
+              p='30px'
+               >
+                <Typography
+                variant ='h5'
+                fontWeight='600'
+                >
+                   Campaign Foods in outher Country 
+                </Typography>
+                
+                 <Box height='250px' ml='-20px'>
+                   < Barchat/>            
+               </Box>
+              </Box>
+              <Box
+               gridColumn='span 4 '
+               gridRow='span 2 '
+               backgroundColor= { colors.primary[800]}
+              p='30px'
+               >
+                <Typography
+                variant ='h5'
+                fontWeight='600'
+                >
+                   Campaign Foods in outher Country 
+                </Typography>
+                
+                 <Box height='250px' ml='-20px'>
+                   < GeograpyDas/>            
+                </Box>
+              </Box>
+
            </Box>
         </Box>
       );
