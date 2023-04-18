@@ -13,43 +13,42 @@ import Bar from "./Scenes/Bar";
 import Pie from "./Scenes/Pie";
 import Line from "./Scenes/Line";
 import Geo from "./Scenes/Geograpy";
+import SidBar from "./Scenes/Global/SidBar";
+import { useState } from "react";
+import GeograpyDas from "./Components/Header/Geograpy";
 
 
-function App () {
-  const [ theme, colorMode] = useMode();
 
-  return(
+function App() {
+  const [theme, colorMode] = useMode();
+  const [isSidebar, setIsSidebar] = useState(true);
+
+  return (
     <ColorModeContext.Provider value={colorMode}>
-    <ThemeProvider theme={theme}>
-       <CssBaseline/>
-      <div className="App">
-             
-          <main>
-              <TopBar/>
-                     <Routes>
-                         <Route path="/" element={ <Dashboard />}/>
-                         <Route path="/Team" element={<Team/>} />
-                         <Route path="/Contact" element={<Contact/>}/>
-                         <Route path="/Invoices" element={<Invoices/>}/>
-                         <Route path="/Form" element={<Form/>}/>
-                         <Route path='/Calendar'  element={<CalendarDash/>}/>
-                         <Route  path="/Faq" element={<FaqDash/>}/>
-                         <Route path='/Bar' element={<Bar/>}/>
-                         <Route  path="/Pie" element={<Pie/>}/>
-                         <Route path="/Line" element = { <Line/>} />
-                         <Route path="/Geo" element ={ <Geo/>}/>
-                     </Routes>
-            </main>
-          
-
-      </div>
-    
-    
-    </ThemeProvider>
-    
-    
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <div className="app">
+          <SidBar isSidebar={isSidebar} />
+          <main className="content">
+            <TopBar setIsSidebar={setIsSidebar} />
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/team" element={<Team />} />
+              <Route path="/contacts" element={<Contact />} />
+              <Route path="/invoices" element={<Invoices />} />
+              <Route path="/form" element={<Form />} />
+              <Route path="/bar" element={<Bar />} />
+              <Route path="/pie" element={<Pie />} />
+              <Route path="/line" element={<Line />} />
+              <Route path="/faq" element={<FaqDash />} />
+              <Route path="/calendar" element={<CalendarDash />} />
+              <Route path="/geography" element={<GeograpyDas />} />
+            </Routes>
+          </main>
+        </div>
+      </ThemeProvider>
     </ColorModeContext.Provider>
-
-  )}
+  );
+}
 
 export default App;

@@ -24,6 +24,7 @@ const Dashboard = () => {
     const colors = tokens(theme.palette.mode)
 
     return (
+
         <Box m="20px">
          
 
@@ -48,7 +49,7 @@ const Dashboard = () => {
               </Button>
             </Box>
           </Box>
-    
+           
           
           <Box
             display="grid"
@@ -133,7 +134,7 @@ const Dashboard = () => {
                 }
               />
             </Box>   
-
+           
             {/* Part 2 create  body Dashboard */}
 
             <Box

@@ -1,32 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
 
-
-html,
-body,
+body, html {height:100%;}
 #root,
 .app,
-.content{
-   
+.content {
   height: 100%;
   width: 100%;
-  font-family: 'Sorce Sans Pro ', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
-.app{
+.app {
   display: flex;
   position: relative;
 }
 
 ::-webkit-scrollbar {
-  width: 10px ;
+  width: 10px;
 }
 
-::-webkit-scrollbar-track{
-
- background: #fff;
-  background-color: #888 ;
-
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
 }
 
-::-webkit-scrollbar-track:hover{
-  background-color: #555;
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: black;
+}
+
+
+html
+{
+  
+
+  scroll-behavior: smooth ;
+  position: relative;
+}
+
+body { overflow-y: auto; 
+background-color: black;
+}
+
+.Sid{
+
+  overflow-y: hidden;
+
 }
