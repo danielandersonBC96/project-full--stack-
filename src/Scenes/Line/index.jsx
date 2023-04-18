@@ -13,7 +13,7 @@ const Line = () => {
           <Header title= ' Line Dashboard' subtitle='Simple  line  Dashboard '/>
           <Box  height='75vh'>
         
-                <LineDasChart/>
+              <LineDasChart/>
            </Box>
 
        </Box>
